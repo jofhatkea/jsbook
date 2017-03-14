@@ -8,6 +8,10 @@
     * [Linking up our Script](/pages/initial/linking-up-our-script.md)
     * [Variables, part. 1](/pages/initial/variables-part-1.md)
     * [Introducing, the DOM](/pages/initial/introducing-the-dom.md)
+    * [document](/pages/initial/document.md)
+    * [The console](/pages/initial/the-console.md)
+* [Getting started](/pages/getting-started/README.md)
+    
 * [Numbers](numbers/README.md)
     * [Types](basics/types.md)
     * [Equality](basics/equality.md)

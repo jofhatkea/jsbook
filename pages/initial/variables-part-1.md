@@ -35,7 +35,25 @@ As you might have noticed, I used quotes when I wrote `let name = "Jonas";` and 
 
 The simple explanation is that when we write pieces of text, we use quotes, and when we write numbers we don't.
 
-In chapter TODO we'll dive in to the differences
+In chapter TODO we'll dive into the differences but for now, let's try it out.
+
+{% exercise %}
+Create a variable called `myName` and set it's value to your name.
+
+Then add another called `age` and set it to 18
+
+{% initial %}
+let myName = 
+
+{% solution %}
+let myName = "Jonas";
+let age = 18;
+
+{% validation %}
+assert(age === 18);
+assert(typeof myName === "string")
+
+{% endexercise %}
 
 ## `var` and `const`
 `var` and `const` are two other ways of declaring variables, which we'll take a look at soon enough, just know that they exist, and that most examples you'll find online will use `var`, for now, there is no difference, but you should start using `let`

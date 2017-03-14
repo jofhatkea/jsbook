@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf _book/*",
+    "release": "npm run clean && gitbook build",
+    "deploy": "cd _book && git add --all && git commit -m \"Release at $(date)\" && git push"
   },
   "author": "Jonas Holbech",
   "license": "ISC"
