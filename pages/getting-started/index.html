@@ -66,10 +66,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../numbers/README.md" />
+    <link rel="next" href="what-happened.html" />
     
     
-    <link rel="prev" href="../initial/the-console.html" />
+    <link rel="prev" href="../initial/the-console-part-2.html" />
     
 
     </head>
@@ -235,6 +235,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.6" data-path="../initial/the-console-part-2.html">
+            
+                <a href="../initial/the-console-part-2.html">
+            
+                    
+                    The console, part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -250,6 +263,38 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="what-happened.html">
+            
+                <a href="what-happened.html">
+            
+                    
+                    What happened
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="document.querySelector.html">
+            
+                <a href="document.querySelector.html">
+            
+                    
+                    document.querySelector
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -797,7 +842,52 @@
                                 
                                 <h1 id="getting-started">Getting started</h1>
 <p>In this chapter you&apos;ll be building your first little script, it won&apos;t do much, but it&apos;ll serve us nicely as an example on how JS works with the DOM.</p>
-<p>Initially I&apos;ll ask you to copy/paste some code, and once you&apos;re up and running with this, we&apos;ll talk about what just happened. </p>
+<p>Initially I&apos;ll ask you to write some code you won&apos;t fully understand, and once you&apos;re up and running with this, we&apos;ll talk about what just happened.</p>
+<p>And notice I wrote &quot;write som code&quot;, not &quot;copy/paste&quot;, in order to get this I feel it&apos;s crucial that you actually write it yourself. You won&apos;t learn this without making some mistakes on your own!</p>
+<h2 id="our-first-script">Our first script</h2>
+<ol>
+<li><p>Create a .html file containing the following markup (you CAN copy/paste html, just read through it)</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>JS is so cool<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+     <span class="hljs-selector-tag">body</span> {
+         <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+         <span class="hljs-attribute">background</span>: black;
+         <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+         <span class="hljs-attribute">transition</span>: <span class="hljs-number">6s</span> opacity;
+     }
+     <span class="hljs-selector-tag">body</span><span class="hljs-selector-class">.visible</span> {
+         <span class="hljs-attribute">opacity</span>:<span class="hljs-number">1</span>;
+     }
+ </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Here comes the content<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+ <span class="hljs-comment">&lt;!-- add a couple of paragraphs here --&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;js/myscript.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>create a folder called &#xB4;js&#xB4; next to it, and create a file called <code>myscript.js</code> inside that</p>
+</li>
+<li><p>open <code>myscript.js</code> and write the following</p>
+</li>
+</ol>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;load&apos;</span>, fadeInPage);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fadeInPage</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">let</span> bodyElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;body&apos;</span>)
+    bodyElement.classList.add(<span class="hljs-string">&apos;visible&apos;</span>);
+}
+</code></pre>
+<ol>
+<li>Now go look at your HTML file in your browser, and watch it fade in</li>
+</ol>
 
                                 
                                 </section>
@@ -825,12 +915,12 @@
 
             
                 
-                <a href="../initial/the-console.html" class="navigation navigation-prev " aria-label="Previous page: The console">
+                <a href="../initial/the-console-part-2.html" class="navigation navigation-prev " aria-label="Previous page: The console, part 2">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../numbers/README.md" class="navigation navigation-next " aria-label="Next page: Numbers">
+                <a href="what-happened.html" class="navigation navigation-next " aria-label="Next page: What happened">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -841,7 +931,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Getting started","level":"1.3","depth":1,"next":{"title":"Numbers","level":"1.4","depth":1,"path":"numbers/README.md","ref":"numbers/README.md","articles":[{"title":"Types","level":"1.4.1","depth":2,"path":"basics/types.md","ref":"basics/types.md","articles":[]},{"title":"Equality","level":"1.4.2","depth":2,"path":"basics/equality.md","ref":"basics/equality.md","articles":[]},{"title":"Creation","level":"1.4.3","depth":2,"path":"numbers/create.md","ref":"numbers/create.md","articles":[]},{"title":"Basic Operators","level":"1.4.4","depth":2,"path":"numbers/operators.md","ref":"numbers/operators.md","articles":[]},{"title":"Advanced Operators","level":"1.4.5","depth":2,"path":"numbers/advanced.md","ref":"numbers/advanced.md","articles":[]}]},"previous":{"title":"The console","level":"1.2.5","depth":2,"path":"pages/initial/the-console.md","ref":"pages/initial/the-console.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","addcssjs","livereload"],"pluginsConfig":{"livereload":{},"search":{},"addcssjs":{"css":["assets/css/custom.css"],"js":["assets/js/custom.js"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/getting-started/README.md","mtime":"2017-03-14T08:59:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-14T09:28:43.949Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Getting started","level":"1.3","depth":1,"next":{"title":"What happened","level":"1.3.1","depth":2,"path":"pages/getting-started/what-happened.md","ref":"pages/getting-started/what-happened.md","articles":[]},"previous":{"title":"The console, part 2","level":"1.2.6","depth":2,"path":"pages/initial/the-console-part-2.md","ref":"pages/initial/the-console-part-2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","addcssjs"],"pluginsConfig":{"addcssjs":{"css":["assets/css/custom.css"],"js":["assets/js/custom.js"]},"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/getting-started/README.md","mtime":"2017-03-14T09:49:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-27T09:08:27.688Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -867,10 +957,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-exercises/exercises.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

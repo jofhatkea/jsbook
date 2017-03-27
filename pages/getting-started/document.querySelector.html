@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Variables, part. 1 · GitBook</title>
+        <title>document.querySelector · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -66,10 +66,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="introducing-the-dom.html" />
+    <link rel="next" href="../../numbers/README.md" />
     
     
-    <link rel="prev" href="linking-up-our-script.html" />
+    <link rel="prev" href="what-happened.html" />
     
 
     </head>
@@ -156,9 +156,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../initial/">
             
-                <a href="./">
+                <a href="../initial/">
             
                     
                     Initial Steps
@@ -170,9 +170,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="linking-up-our-script.html">
+        <li class="chapter " data-level="1.2.1" data-path="../initial/linking-up-our-script.html">
             
-                <a href="linking-up-our-script.html">
+                <a href="../initial/linking-up-our-script.html">
             
                     
                     Linking up our Script
@@ -183,9 +183,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="variables-part-1.html">
+        <li class="chapter " data-level="1.2.2" data-path="../initial/variables-part-1.html">
             
-                <a href="variables-part-1.html">
+                <a href="../initial/variables-part-1.html">
             
                     
                     Variables, part. 1
@@ -196,9 +196,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="introducing-the-dom.html">
+        <li class="chapter " data-level="1.2.3" data-path="../initial/introducing-the-dom.html">
             
-                <a href="introducing-the-dom.html">
+                <a href="../initial/introducing-the-dom.html">
             
                     
                     Introducing, the DOM
@@ -209,9 +209,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="document.html">
+        <li class="chapter " data-level="1.2.4" data-path="../initial/document.html">
             
-                <a href="document.html">
+                <a href="../initial/document.html">
             
                     
                     document
@@ -222,9 +222,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="the-console.html">
+        <li class="chapter " data-level="1.2.5" data-path="../initial/the-console.html">
             
-                <a href="the-console.html">
+                <a href="../initial/the-console.html">
             
                     
                     The console
@@ -235,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="the-console-part-2.html">
+        <li class="chapter " data-level="1.2.6" data-path="../initial/the-console-part-2.html">
             
-                <a href="the-console-part-2.html">
+                <a href="../initial/the-console-part-2.html">
             
                     
                     The console, part 2
@@ -253,9 +253,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../getting-started/">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="../getting-started/">
+                <a href="./">
             
                     
                     Getting started
@@ -267,9 +267,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../getting-started/what-happened.html">
+        <li class="chapter " data-level="1.3.1" data-path="what-happened.html">
             
-                <a href="../getting-started/what-happened.html">
+                <a href="what-happened.html">
             
                     
                     What happened
@@ -280,9 +280,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../getting-started/document.querySelector.html">
+        <li class="chapter active" data-level="1.3.2" data-path="document.querySelector.html">
             
-                <a href="../getting-started/document.querySelector.html">
+                <a href="document.querySelector.html">
             
                     
                     document.querySelector
@@ -825,7 +825,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Variables, part. 1</a>
+        <a href="../.." >document.querySelector</a>
     </h1>
 </div>
 
@@ -840,69 +840,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="variables-part-1">Variables, part 1</h1>
-<p><em>Variables</em> are the cornerstone of programming, so let&apos;s dwell a bit here.</p>
-<p>In a computer program we constantly need to store values for later, facebook stores your username (and WAAAAYYY more), games store your score, gold, friends etc, and all of that
-is stored in what&apos;s known as variables.</p>
-<p>A variable is like a drawer, you have a handle, you can pull it out, and you can add and remove stuff from the drawer.</p>
-<p>In JS we declare variables using the keyword <code>let</code></p>
-<p>After that we define what we want our variable to be called, and finally, we can give it an initial value</p>
-<p><code>let name = &quot;Jonas&quot;;</code></p>
-<h2 id="a-few-words-about-naming">a few words about naming</h2>
-<p>In the previous example I called my variable <code>name</code>, there are a few rules when it comes to naming</p>
-<p>These are the simplified rules</p>
+                                <h1 id="documentqueryselector"><code>document.querySelector</code></h1>
+<p>So remember <code>document</code>? It is a reference to the DOM. That reference contains a lot of interesting stuff we can use. Among these are the method <code>.querySelector()</code></p>
+<p>We use it to ask the DOM to give us a certain node, and we pass in a CSS selector so it knows what to search for</p>
+<p>When we use it, we get something back, a <code>node</code> which we can store in a variable</p>
 <ol>
-<li>They start with a letter</li>
-<li>After that we can have more letters and/or numbers</li>
-<li>They can&apos;t contain spaces</li>
-<li>Use camelCase if you put words together<ul>
-<li><code>let firstName</code> is good</li>
-<li><code>let firstname</code> is allowed, but let&apos;s never use it</li>
-</ul>
+<li><p>grab the element that has <code>id=&quot;people&quot;</code> and store it in the variable <code>myElem</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> myElem = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#people&apos;</span>);
+</code></pre>
 </li>
-<li>Never use dash/minus <code>-</code></li>
-<li>There&apos;s a long list of words that are reserved in JS, words we cannot use to name our variables, <code>let</code> is an example of a reserved word. It has a special meaning in the language</li>
+<li><p>grab the <strong>first</strong> element that has <code>class=&quot;person&quot;</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> person = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;.person&apos;</span>);
+</code></pre>
+</li>
+<li><p>and just to show you any CSS selector goes:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> someElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;body&gt;article header.main:nth-child(2)&apos;</span>);
+</code></pre>
+</li>
 </ol>
-<h2 id="more-on-defining-variables">More on defining variables</h2>
-<p>When we declare our variables, we can optionally give it an initial value</p>
-<p><code>let numberOfKids = 3;</code> is a variable with an initial value, whereas <code>let numberOfDivorces;</code> is a variable that is &quot;undefined&quot;</p>
-<h3 id="a-brief-note-on-variable-values">A brief note on variable values</h3>
-<p>As you might have noticed, I used quotes when I wrote <code>let name = &quot;Jonas&quot;;</code> and I omitted them when I wrote <code>let numberOfKids = 3;</code></p>
-<p>The simple explanation is that when we write pieces of text, we use quotes, and when we write numbers we don&apos;t.</p>
-<p>In chapter TODO we&apos;ll dive into the differences but for now, let&apos;s try it out.</p>
-<p><div class="exercise">
-	<div class="header">Exercise</div>
-	<div class="alert alert-success">
-	    <b>Correct!</b>
-	</div>
-
-	<div class="alert alert-danger error-message">
-	    <b>False!</b>
-	</div>
-
-	<div class="message">
-	
-Create a variable called `myName` and set it&apos;s value to your name.
-
-Then add another called `age` and set it to 18
-
-
-	</div>
-	<div class="editor" style="height: 40px">let myName =</div>
-
-	<pre class="hidden code-solution">let myName = &quot;Jonas&quot;;
-let age = 18;</pre>
-	<pre class="hidden code-validation">assert(age === 18);
-assert(typeof myName === &quot;string&quot;)</pre>
-	
-
-	<div class="buttons">
-	    <a href="#" class="button size-2 action-submit">Submit</a>
-	    <a href="#" class="button size-2 action-solution">Solution</a>
-	</div>
-</div></p>
-<h2 id="var-and-const"><code>var</code> and <code>const</code></h2>
-<p><code>var</code> and <code>const</code> are two other ways of declaring variables, which we&apos;ll take a look at soon enough, just know that they exist, and that most examples you&apos;ll find online will use <code>var</code>, for now, there is no difference, but you should start using <code>let</code></p>
 
                                 
                                 </section>
@@ -930,12 +885,12 @@ assert(typeof myName === &quot;string&quot;)</pre>
 
             
                 
-                <a href="linking-up-our-script.html" class="navigation navigation-prev " aria-label="Previous page: Linking up our Script">
+                <a href="what-happened.html" class="navigation navigation-prev " aria-label="Previous page: What happened">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="introducing-the-dom.html" class="navigation navigation-next " aria-label="Next page: Introducing, the DOM">
+                <a href="../../numbers/README.md" class="navigation navigation-next " aria-label="Next page: Numbers">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -946,7 +901,7 @@ assert(typeof myName === &quot;string&quot;)</pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Variables, part. 1","level":"1.2.2","depth":2,"next":{"title":"Introducing, the DOM","level":"1.2.3","depth":2,"path":"pages/initial/introducing-the-dom.md","ref":"pages/initial/introducing-the-dom.md","articles":[]},"previous":{"title":"Linking up our Script","level":"1.2.1","depth":2,"path":"pages/initial/linking-up-our-script.md","ref":"pages/initial/linking-up-our-script.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","addcssjs"],"pluginsConfig":{"addcssjs":{"css":["assets/css/custom.css"],"js":["assets/js/custom.js"]},"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/initial/variables-part-1.md","mtime":"2017-03-14T08:56:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-27T09:08:27.688Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"document.querySelector","level":"1.3.2","depth":2,"next":{"title":"Numbers","level":"1.4","depth":1,"path":"numbers/README.md","ref":"numbers/README.md","articles":[{"title":"Types","level":"1.4.1","depth":2,"path":"basics/types.md","ref":"basics/types.md","articles":[]},{"title":"Equality","level":"1.4.2","depth":2,"path":"basics/equality.md","ref":"basics/equality.md","articles":[]},{"title":"Creation","level":"1.4.3","depth":2,"path":"numbers/create.md","ref":"numbers/create.md","articles":[]},{"title":"Basic Operators","level":"1.4.4","depth":2,"path":"numbers/operators.md","ref":"numbers/operators.md","articles":[]},{"title":"Advanced Operators","level":"1.4.5","depth":2,"path":"numbers/advanced.md","ref":"numbers/advanced.md","articles":[]}]},"previous":{"title":"What happened","level":"1.3.1","depth":2,"path":"pages/getting-started/what-happened.md","ref":"pages/getting-started/what-happened.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","addcssjs"],"pluginsConfig":{"addcssjs":{"css":["assets/css/custom.css"],"js":["assets/js/custom.js"]},"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/getting-started/document.querySelector.md","mtime":"2017-03-16T12:13:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-27T09:08:27.688Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
