@@ -10,8 +10,10 @@
     * [Introducing, the DOM](/pages/initial/introducing-the-dom.md)
     * [document](/pages/initial/document.md)
     * [The console](/pages/initial/the-console.md)
+    * [The console, part 2](/pages/initial/the-console-part-2.md)
 * [Getting started](/pages/getting-started/README.md)
-    
+    * [What happened](/pages/getting-started/what-happened.md)
+    * [document.querySelector](/pages/getting-started/document.querySelector.md)
 * [Numbers](numbers/README.md)
     * [Types](basics/types.md)
     * [Equality](basics/equality.md)

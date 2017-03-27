@@ -1,4 +1,9 @@
 {
     "plugins": ["exercises", "addcssjs"],
-    "pluginsConfig": { "addcssjs": { "js": ["assets/js/custom.js"], "css": ["assets/css/custom.css"] } }
+    "pluginsConfig": {
+        "addcssjs": {
+            "js": ["assets/js/custom.js"],
+            "css": ["assets/css/custom.css"]
+        }
+    }
 }

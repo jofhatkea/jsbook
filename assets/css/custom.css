@@ -1,0 +1,19 @@
+.js-exercise .solution {
+    display:none;
+}
+.js-exercise .solution.visible {
+    display:block;
+}
+.js-exercise textarea {
+    display:block;
+    margin: 0;
+    width: 80%;
+}
+.js-exercise .feedbackmessage.success {
+    color:green;
+    background-color: lightgreen;
+}
+.js-exercise .feedbackmessage.error {
+    color:darkred;
+    background-color: indianred;
+}
